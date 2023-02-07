@@ -14,8 +14,19 @@ spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localhost:3306/project
-    username : root
-    password : 1234
+    username: root
+    password: 1234
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-name: google
+            client-id: 903684776912-1mjksa1mapb1i2dncofmnnd4khf8ln7i.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+            redirect-uri: http://localhost:9090/login/oauth2/code/google
+
 
   jpa:
     hibernate:
